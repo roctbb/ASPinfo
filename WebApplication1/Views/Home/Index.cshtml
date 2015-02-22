@@ -2,30 +2,206 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="row marketing" style="margin-top: 10px;">
+    <ul class="nav nav-tabs">
+        <li><a href="#all" data-toggle="tab">Всем</a></li>
+        <li><a href="#admin" data-toggle="tab">Администрации</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Учителю <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li class=""><a href="#math" data-toggle="tab">Математика и физика</a></li>
+                <li class=""><a href="#it" data-toggle="tab">Информатика</a></li>
+                <li class=""><a href="#russian" data-toggle="tab">Русский язык и литература</a></li>
+                <li class=""><a href="#lang" data-toggle="tab">Иностранные языки</a></li>
+                <li class=""><a href="#history" data-toggle="tab">История и обществознание</a></li>
+                <li class=""><a href="#art" data-toggle="tab">Творчество</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="all">
+            <div class="alert alert-info" role="alert"><strong>Всем - информация для всех сотрудников</strong></div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                    <h4><a href="index.php?event=10">Срочное событие</a></h4>
+                    <p><p>Описание</p></p>
+                    <span class="label label-warning">2015-02-22</span>
+                    <p>&nbsp;</p>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                    <h4><a href="index.php?event=9">Тестовое событие</a></h4>
+                    <p><p>Описание</p></p>
+                    <span class="label label-warning">2015-02-28</span>
+                    <p>&nbsp;</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="admin">
+            <div class="alert alert-info" role="alert"><strong>Администрации - сообщения для руководства</strong></div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="math">
+            <div class="alert alert-info" role="alert"><strong>Математика и физика</strong></div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                    <h4><a href="index.php?event=9">Тестовое событие</a></h4>
+                    <p><p>Описание</p></p>
+                    <span class="label label-warning">2015-02-28</span>
+                    <p>&nbsp;</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="it">
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                    <h4><a href="index.php?event=9">Тестовое событие</a></h4>
+                    <p><p>Описание</p></p>
+                    <span class="label label-warning">2015-02-28</span>
+                    <p>&nbsp;</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="russian">
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="lang">
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="history">
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="art">
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-danger">
+                    <h3>Срочно</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-primary">
+                    <h3>Актуально</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-callout bs-callout-info">
+                    <h3>На горизонте</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
