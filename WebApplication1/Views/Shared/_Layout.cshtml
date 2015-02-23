@@ -19,28 +19,36 @@
                     <span class="icon-bar"></span>
                 </button>
                 
-                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Lightning", "Index", "Events", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li> 
-                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("События", "Index", "Events")</li>
+                    <li>@Html.ActionLink("Управление", "Index", "EventsAdmin")</li> 
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; Инфо отдел Гимназии 1576, 2015</p>
-        </footer>
-    </div>
+        <div class="row marketing" style="margin-top: 10px;">
+            @RenderBody()
+            <hr />
+            </div>
+            <footer>
+                <p>&copy; Инфо отдел Гимназии 1576, 2015</p>
+            </footer>
+        </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/scripts/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">
+tinymce.init({
+    selector: "textarea"
+ });
+    </script>
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

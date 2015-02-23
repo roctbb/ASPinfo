@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebApplication1.Models.Event>
+
+@{
+    ViewBag.Title = "Актуальные события";
+}
+
+<h2>Актуальные события</h2>
+
+
+<div class="col-lg-4">
+    <div class="bs-callout bs-callout-danger">
+        <h3>Срочно</h3>
+        <p>&nbsp;</p>
+        @foreach (var item in Model)
+        {
+            DateTime cd = System.DateTime.Now;
+            int dd = ((TimeSpan)(item.Date - cd)).Days;
+            if (dd < 5)
+            {
+                        <h4>
+                            @Html.ActionLink(item.Title, "Details", new { id = item.ID })
+                        </h4>
+                        <p><p>@Html.DisplayFor(modelItem => item.Annotation)</p></p>
+                        <span class="label label-warning">@Html.DisplayFor(modelItem => item.Date)</span>
+                        <p>&nbsp;</p>
+            }
+        }
+    </div>
+</div>
+<div class="col-lg-4">
+    <div class="bs-callout bs-callout-primary">
+        <h3>Актуально</h3>
+        <p>&nbsp;</p>
+        @foreach (var item in Model)
+        {
+            DateTime cd = System.DateTime.Now;
+            int dd = ((TimeSpan)(item.Date - cd)).Days;
+            if (dd >= 5 && dd<14)
+            {
+                <h4>
+                    @Html.ActionLink(item.Title, "Details", new { id = item.ID })
+                </h4>
+                        <p><p>@Html.DisplayFor(modelItem => item.Annotation)</p></p>
+                        <span class="label label-primary">@Html.DisplayFor(modelItem => item.Date)</span>
+                        <p>&nbsp;</p>
+            }
+        }
+                
+    </div>
+</div>
+<div class="col-lg-4">
+    <div class="bs-callout bs-callout-info">
+        <h3>На горизонте</h3>
+        <p>&nbsp;</p>
+        @foreach (var item in Model)
+        {
+            DateTime cd =  System.DateTime.Now;
+            int dd = ((TimeSpan)(item.Date - cd)).Days;
+            @Html.Label(dd.ToString());
+            if (dd>= 14)
+            {
+                <h4>
+                    @Html.ActionLink(item.Title, "Details", new { id = item.ID })
+                </h4>
+                <p><p>@Html.DisplayFor(modelItem => item.Annotation)</p></p>
+                <span class="label label-info">@Html.DisplayFor(modelItem => item.Date)</span>
+                        <p>&nbsp;</p>
+            }
+        }
+    </div>
+</div>
+
+    
